@@ -1,11 +1,3 @@
-# margin_top = 2 * 26
-# margin_right = 1.25 * 28
-# margin_left = 1.25 * 28
-# margin_bottom = 1.7 * 26
-# margin_vertical = 0.5 * 28
-# margin_horizontal = 0.4 * 28
-
-
 import fitz  # PyMuPDF
 
 # Abrir o arquivo PDF original
@@ -14,11 +6,11 @@ pdf_document = fitz.open(input_pdf_file)
 
 # Definição das margens em centímetros, convertidas para pontos (1 cm = 28.35 pontos)
 margin_top = 2 * 26
-margin_right = 1.25 * 28
-margin_left = 1.25 * 28
-margin_bottom = 1.7 * 26
-margin_vertical = 0.5 * 28
-margin_horizontal = 0.4 * 28
+margin_right = 1.25 * 28.35
+margin_left = 1.25 * 28.35
+margin_bottom = 1.7 * 28.35
+margin_vertical = 0.5 * 28.35
+margin_horizontal = 0.4 * 28.35
 
 # Coordenadas para cada etiqueta na tabela 3x6
 labels_per_row = 3
@@ -56,7 +48,7 @@ for page_num in range(len(pdf_document)):
             new_page.show_pdf_page(new_page.rect, pdf_document, pno=page_num, clip=label_rect)
 
 # Salvar o novo PDF
-output_filename = 'etiquetas.pdf'
+output_filename = 'volumes-separados.pdf'
 output_pdf_document.save(output_filename)
 output_pdf_document.close()
 
