@@ -1,4 +1,4 @@
-PDF Label Cropper
+## PDF Label Cropper
 
 Olá! Este é um script Python que recorta um PDF em 18 partes, mapeadas em uma grade de 3x6.
 
